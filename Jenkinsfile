@@ -19,9 +19,7 @@ pipeline {
                 git credentialsId: 'github-server-credentials', url: 'https://github.com/Venkat-6040/Maven-Java-Project.git'    
             }
            } 
-        }
-
-    stage('Tools-Setup') {
+        stage('Tools-Setup') {
             steps {
 		    echo "Tools Setup"
                 sshCommand remote: ansible, command: 'cd Maven-Java-Project; git pull'
@@ -33,6 +31,8 @@ pipeline {
 	       //sshCommand remote: kops, command: "kubectl apply -f Maven-Java-Project/k8s-code/staging/namespace/staging-ns.yml"
 	       //sshCommand remote: kops, command: "kubectl apply -f Maven-Java-Project/k8s-code/prod/namespace/prod-ns.yml"
             }            
-        }     
+        }  
+     }
+       
   
 }
