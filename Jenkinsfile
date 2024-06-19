@@ -2,7 +2,7 @@ def ansible = [:]
          ansible.name = 'ansible'
          ansible.host = '172.31.21.23'
          ansible.user = 'centos'
-         ansible.password = 'devops'
+         ansible.password = 'devops01'
          ansible.allowAnyHosts = true
 pipeline {
     agent { label 'Build Server'}
