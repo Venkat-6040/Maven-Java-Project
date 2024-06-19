@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'buildserver'}
+    agent { label 'Buildserver'}
 
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
