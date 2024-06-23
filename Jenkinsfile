@@ -15,7 +15,7 @@ pipeline {
 		stash 'Source'
             }
          } 
-  node {
+  
   def ansible = [:]
    ansible.name = 'ansible'
          ansible.host = '172.31.34.148'
@@ -36,8 +36,4 @@ pipeline {
             }            
         } 
       }
-       
- }
-       
-  
 }
