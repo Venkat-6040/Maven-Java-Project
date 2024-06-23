@@ -21,6 +21,13 @@ pipeline {
 		stash 'Source'
             }
          } 
+	    node {
+  def ansible = [:]
+  ansible.name = 'ansible'
+         ansible.host = '172.31.34.148'
+         ansible.user = 'centos'
+         ansible.password = 'devops'
+         ansible.allowAnyHosts = true
         stage('Tools-Setup') {
             steps {
 		    echo "Tools Setup"
@@ -33,7 +40,9 @@ pipeline {
 	       //sshCommand remote: kops, command: "kubectl apply -f Maven-Java-Project/k8s-code/staging/namespace/staging-ns.yml"
 	       //sshCommand remote: kops, command: "kubectl apply -f Maven-Java-Project/k8s-code/prod/namespace/prod-ns.yml"
             }            
-        }  
+        } 
+      }
+       
      }
        
   
