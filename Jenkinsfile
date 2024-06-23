@@ -16,9 +16,10 @@ pipeline {
         stage('Prepare-Workspace') {
             steps {
                 // Get some code from a GitHub repository
-                git credentialsId: 'github-server-credentials', url: 'https://github.com/Venkat-6040/Maven-Java-Project.git'    
+                git credentialsId: 'github-server-credentials', url: 'https://github.com/Venkat-6040/Maven-Java-Project.git' 
+		stash 'Source'
             }
-           } 
+         } 
         stage('Tools-Setup') {
             steps {
 		    echo "Tools Setup"
