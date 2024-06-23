@@ -16,7 +16,7 @@ pipeline {
         stage('Prepare-Workspace') {
             steps {
                 // Get some code from a GitHub repository
-                git branch: 'master', credentialsId: 'github', url: 'https://github.com/Venkat-6040/Maven-Java-Project.git' 
+                git credentialsId: 'b3f016a0-ed75-44c0-911d-e1f9c360e381', url: 'https://github.com/Venkat-6040/Maven-Java-Project.git' 
 		// git branch: 'main', credentialsId: 'gitlab', url: 'https://gitlab.com/rns-app/student-app.git'
 		stash 'Source'
             }
