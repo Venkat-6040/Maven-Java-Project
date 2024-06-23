@@ -1,3 +1,9 @@
+def ansible = [:]
+   ansible.name = 'ansible'
+         ansible.host = '172.31.34.148'
+         ansible.user = 'centos'
+         ansible.password = 'devops'
+         ansible.allowAnyHosts = true
 pipeline {
     agent { label 'Build Server'}
 
@@ -15,13 +21,6 @@ pipeline {
 		stash 'Source'
             }
          } 
-  
-  def ansible = [:]
-   ansible.name = 'ansible'
-         ansible.host = '172.31.34.148'
-         ansible.user = 'centos'
-         ansible.password = 'devops'
-         ansible.allowAnyHosts = true
         stage('Tools-Setup') {
             steps {
 		    echo "Tools Setup"
