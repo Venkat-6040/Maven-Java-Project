@@ -1,11 +1,11 @@
 def ansible = [:]
          ansible.name = 'ansible'
-         ansible.host = '172.31.34.148'
+         ansible.host = '172.31.28.233'
          ansible.user = 'centos'
          ansible.password = 'devops'
          ansible.allowAnyHosts = true
 pipeline {
-    agent { label 'Build Server'}
+    agent { label 'Build server'}
 
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
